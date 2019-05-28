@@ -69,7 +69,9 @@ PATH management is going to be key to make sure you get the Python you expect
 Disco Dingo has 🐍 Python 3.7.3 as default, but when I upgraded, my python command still gives me 2.7
 :::
 
-# Ubuntu Fix for Correct Versions
+---
+
+#### Ubuntu Fix for Correct Versions
 
     $ sudo update-alternatives --install /usr/bin/python python \
         /usr/bin/python3.7 20
@@ -160,6 +162,7 @@ Let's come back to this topic after we discuss virtualenvs as this can still cau
 :::
 
 # Lucky You!
+## 🍀
 
 ~~~ {.shell}
 $ mkdir MyProject
@@ -177,21 +180,27 @@ use the convention of `venv` for your project as may source control tools are al
 Some folks use some shell prompt trickery to make the virtual env name appear to be the project directory
 :::
 
-# 😢
+---
+
+## 😢
+
+~~~ {.shell}
+$ python -m venv foo
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+apt-get install python3-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+~~~
 
 ::: notes
 As of Python 3.3, virtual environments are included via the `venv` modules except when it is not.
+
+Demo the two project environments created with `venv`
 :::
-
-    $ python -m venv foo
-    The virtual environment was not created successfully because ensurepip is not
-    available.  On Debian/Ubuntu systems, you need to install the python3-venv
-    package using the following command.
-
-    apt-get install python3-venv
-
-    You may need to use sudo with that command.  After installing the python3-venv
-    package, recreate your virtual environment.
 
 # Legacy Python
 
@@ -228,10 +237,11 @@ https://bitbucket.org/guillermooo/virtualenvwrapper-powershell
 
 ![](https://paper-attachments.dropbox.com/s_592264EC504FCAD385868533320593CD1F97F1FB64D61A77B9E1A6B7FA7B4701_1558971763326_image.png)
 
-##  It works for me but not my team-mate
+##  It works for me™
 
 ::: notes
 ## Fail 4
+
   - My Co-worker cloned the repo and can’t get the project started due to version issues
   - pipenv — repeatable sandboxes and installing packages
     - Alternatives to pipenv, because it may not fit your workflow
@@ -282,7 +292,14 @@ On initialization you can choose a specific python
     (aws-log-tools-GqD1dvo5) $
 
 ::: notes
-demo here the cloudfront tools pipfile
+demo here the cloudfront tools pipfile compared to requrements.txt
+
+Show off `pipenv` subcommands:
+    - shell
+    - graph
+    - check
+
+Also show `pip list --outdated`
 :::
 
 # 
@@ -382,7 +399,7 @@ Be warned, this downloads over 650MB to install the full set of tools
 
 # Questions?
 
-## <calvin@sixfeetup.com>
+#### <calvin@sixfeetup.com>
 
-[`calvinhp`](https://twitter.com/calvinhp)
+[`@calvinhp`](https://twitter.com/calvinhp)
 
