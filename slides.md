@@ -258,6 +258,10 @@ https://bitbucket.org/guillermooo/virtualenvwrapper-powershell
     - Alternatives to pipenv, because it may not fit your workflow
       - Poetry
       - Hatch
+
+Good post with notes about pipenv and the alternatives mentioned here
+
+https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/
 :::
 
 # Installing
@@ -271,6 +275,12 @@ https://bitbucket.org/guillermooo/virtualenvwrapper-powershell
 ㋈
 
     $ pip install --user pipenv
+
+::: notes
+Linuxbrew is a thing!
+
+Note that due to interaction between dependencies, you should limit tools installed in this way to basic building blocks for a Python workflow like virtualenv, pipenv, tox, and similar software.
+:::
 
 #
 
